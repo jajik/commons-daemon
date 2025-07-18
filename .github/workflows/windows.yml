@@ -17,7 +17,6 @@ name: Windows
 
 on:
   push:
-    branches: [ "master" ]
     paths-ignore:
       - 'src/docs/**'
       - 'src/main/java/**'
