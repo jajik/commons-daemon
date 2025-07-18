@@ -54,7 +54,7 @@ jobs:
       - name: Build prunsrv
         run: |
             echo on
-            Start-Process "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VsDevCmd.bat" -arch=${{ matrix.arch }}
+            Start-Process "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VsDevCmd.bat" -ArgumentList "arch=${{ matrix.arch }}"
             cd src/native/windows/apps/prunsrv
             echo "Building prunsrv for ${{ matrix.arch }}"
             nmake BUILD_CPU=${{ matrix.arch }} STATIC_CRT=1 WINVER=0x0A00
