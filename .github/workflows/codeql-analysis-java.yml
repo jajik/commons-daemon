@@ -17,10 +17,10 @@ name: "CodeQL Java"
 
 on:
   push:
-    branches: [ master ]
+    branches: [ test ]
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [ master ]
+    branches: [ master, ci, non-existent ]
   schedule:
     - cron: '33 9 * * 4'
 
